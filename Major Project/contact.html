@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio Site - Contact Page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="contact.css" />
+  </head>
+  <body>
+    <nav>
+      <section class="logo-name">
+        <span class="material-symbols-outlined logo">star_shine</span>
+        <span class="name">Nick Soltysiak</span>
+      </section>
+
+      <section class="links">
+        <a href="index.html">Home</a>
+        <a href="work_experience.html">Work Experience</a>
+        <a href="contact.html">Contact Me</a>
+      </section>
+    </nav>
+
+    <main>
+      <h2>Send me a message</h2>
+      <form action="/complete" method="post">
+        <label for="first_name">First Name</label>
+        <br />
+        <input type="text" name="first_name" id="first_name" />
+
+        <br /><br />
+
+        <label for="last_name">Last Name</label>
+        <br />
+        <input type="text" name="last_name" id="last_name" />
+
+        <br /><br />
+
+        <label for="email">Your Email Address</label>
+        <br />
+        <input type="email" name="email" id="email" />
+
+        <br /><br />
+
+        <label for="subject">Subject</label>
+        <br />
+        <select name="subject" id="subject">
+          <option value="">Select One:</option>
+          <option value="hiring">Hiring</option>
+          <option value="chat">Just Saying Hi</option>
+          <option value="meet">Let's Meet</option>
+        </select>
+
+        <br /><br />
+
+        <label for="date">Expected Response Date</label>
+        <br />
+        <input type="date" name="date" id="date" />
+
+        <br /><br />
+
+        <label for="message">Message</label>
+        <br />
+        <textarea name="message" id="message" rows="5"></textarea>
+
+        <br /><br />
+        <div class="buttons">
+          <button type="submit" class="submit">Send Message</button>
+          <button type="reset" class="reset">Reset Form</button>
+        </div>
+      </form>
+    </main>
+
+    <footer>
+      <h1>Contact Me to Get Started</h1>
+      <section>
+        <div class="container text-center">
+          <div class="row row-1">
+            <div class="col-12 col-sm-6">
+              <i class="fa-solid fa-envelope fa-bounce"></i>&nbsp;&nbsp;Email
+              <br />
+              <span class="footer-sub-text">nsoltysiak@pm.me</span>
+            </div>
+            <div class="col-12 col-sm-6">
+              <i class="fa-solid fa-phone-volume fa-shake"></i>&nbsp;&nbsp;Phone
+              <br />
+              <span class="footer-sub-text">555-555-5555</span>
+            </div>
+          </div>
+          <div class="row row-2">
+            <div class="col-12 col-sm-6">
+              <i class="fa-solid fa-location-dot fa-flip"></i
+              >&nbsp;&nbsp;Location
+              <br />
+              <span class="footer-sub-text">Metro Detroit</span>
+            </div>
+            <div class="col-12 col-sm-6">
+              <i class="fa-brands fa-square-linkedin"></i>&nbsp;&nbsp;LinkedIn
+              <br />
+              <span
+                class="footer-sub-text"
+                onclick="window.open('https://www.linkedin.com/in/nick-soltysiak-23570228a/')"
+                >Click to View Profile</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr />
+      <section class="footer-copyright">
+        <p>&copy; 2025 Nick Soltysiak</p>
+        <button
+          class="footer-button"
+          onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+        >
+          Back to Top&nbsp;&nbsp;<i class="fa-solid fa-arrow-up"></i>
+        </button>
+      </section>
+    </footer>
+
+    <script src="index.js"></script>
+  </body>
+</html>

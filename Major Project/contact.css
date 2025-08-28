@@ -1,0 +1,135 @@
+main {
+  padding: 2rem;
+  background-image: url("images/contact_background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin: 0 auto 1.5rem;
+  text-align: center;
+  background-color: rgb(107, 79, 6);
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 50%;
+  color: white;
+}
+
+form {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+label {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+input {
+  padding: 0.25rem;
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+select,
+option {
+  padding: 0.5rem;
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+textarea {
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  padding: 0.6rem;
+  border-radius: 0.75rem;
+  width: 150px;
+}
+
+button.submit {
+  margin-right: 2rem;
+  background-color: green;
+  color: white;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  border: 1px solid green;
+}
+
+button.submit:hover {
+  background-color: white;
+  color: green;
+  border: 1px solid green;
+}
+
+button.reset {
+  background-color: darkred;
+  color: white;
+  border: 1px solid darkred;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+}
+
+button.reset:hover {
+  background-color: white;
+  color: darkred;
+  border: 1px solid darkred;
+}
+
+@media only screen and (max-width: 699.8px) {
+  h2 {
+    width: 90%;
+  }
+
+  form {
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  button.submit {
+    margin: 0;
+  }
+
+  button.reset {
+    margin-top: 2rem;
+  }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 991.8px) {
+  form {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h2 {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+}

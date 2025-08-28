@@ -31,8 +31,8 @@
 
 ### Imagery
 
-![Water and Mountains](images/water_mountains.jpg "Water and Mountains")
+![Water and Mountains](water_mountains.jpg "Water and Mountains")
 
-![Purple Tree](images/purple.jpg "Purple Tree")
+![Purple Tree](purple.jpg "Purple Tree")
 
-![Sun rays through cloud](images/sunrays.jpg "Sun rays through cloud")
+![Sun rays through cloud](sunrays.jpg "Sun rays through cloud")

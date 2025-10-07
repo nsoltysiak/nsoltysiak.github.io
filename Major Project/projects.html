@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio Site - Contact Page</title>
+    <title>My Portfolio Site - Projects Page</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
@@ -25,7 +25,8 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="contact.css" />
+    <link rel="stylesheet" href="projects.css" />
+    <script src="projects.js" defer></script>
   </head>
   <body>
     <nav>
@@ -43,53 +44,84 @@
     </nav>
 
     <main>
-      <h2>Send me a message</h2>
-      <form action="/complete" method="post">
-        <label for="first_name">First Name</label>
-        <br />
-        <input type="text" name="first_name" id="first_name" />
+      <!-- CALCULATOR PROJECT -->
+      <section class="calculator-project">
+        <h1>Calculator Project</h1>
+        <div class="calculator-project-container">
+          <div class="calculator">
+            <input type="text" class="display" id="display" readonly />
 
-        <br /><br />
+            <div class="buttons">
+              <!-- Row 1 -->
+              <button class="button clear" onclick="handleInput('C')">C</button>
+              <button class="button clear" onclick="handleInput('CE')">
+                CE
+              </button>
+              <button class="button operator" onclick="handleInput('/')">
+                /
+              </button>
+              <button class="button operator" onclick="handleInput('*')">
+                ×
+              </button>
 
-        <label for="last_name">Last Name</label>
-        <br />
-        <input type="text" name="last_name" id="last_name" />
+              <!-- Row 2 -->
+              <button class="button number" onclick="handleInput('7')">
+                7
+              </button>
+              <button class="button number" onclick="handleInput('8')">
+                8
+              </button>
+              <button class="button number" onclick="handleInput('9')">
+                9
+              </button>
+              <button class="button operator" onclick="handleInput('-')">
+                -
+              </button>
 
-        <br /><br />
+              <!-- Row 3 -->
+              <button class="button number" onclick="handleInput('4')">
+                4
+              </button>
+              <button class="button number" onclick="handleInput('5')">
+                5
+              </button>
+              <button class="button number" onclick="handleInput('6')">
+                6
+              </button>
+              <button class="button operator" onclick="handleInput('+')">
+                +
+              </button>
 
-        <label for="email">Your Email Address</label>
-        <br />
-        <input type="email" name="email" id="email" />
+              <!-- Row 4 -->
+              <button class="button number" onclick="handleInput('1')">
+                1
+              </button>
+              <button class="button number" onclick="handleInput('2')">
+                2
+              </button>
+              <button class="button number" onclick="handleInput('3')">
+                3
+              </button>
+              <button class="button equals" onclick="handleInput('=')">
+                =
+              </button>
 
-        <br /><br />
-
-        <label for="subject">Subject</label>
-        <br />
-        <select name="subject" id="subject">
-          <option value="">Select One:</option>
-          <option value="hiring">Hiring</option>
-          <option value="chat">Just Saying Hi</option>
-          <option value="meet">Let's Meet</option>
-        </select>
-
-        <br /><br />
-
-        <label for="date">Expected Response Date</label>
-        <br />
-        <input type="date" name="date" id="date" />
-
-        <br /><br />
-
-        <label for="message">Message</label>
-        <br />
-        <textarea name="message" id="message" rows="5"></textarea>
-
-        <br /><br />
-        <div class="buttons">
-          <button type="submit" class="submit">Send Message</button>
-          <button type="reset" class="reset">Reset Form</button>
+              <!-- Row 5 -->
+              <button
+                class="button number"
+                onclick="handleInput('0')"
+                style="grid-column: span 2"
+              >
+                0
+              </button>
+              <button class="button decimal" onclick="handleInput('.')">
+                .
+              </button>
+            </div>
+          </div>
         </div>
-      </form>
+      </section>
+      <!-- END CALCULATOR PROJECT -->
     </main>
 
     <footer>

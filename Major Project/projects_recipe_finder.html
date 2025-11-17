@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe Finder</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="projects_recipe_finder.css" />
+    <script src="projects_recipe_finder.js" defer></script>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <section class="logo-name">
+        <i class="fa-solid fa-utensils"></i>
+        <span>RecipeHub</span>
+      </section>
+      <section class="faves-and-recipes-found">
+        <div class="favorites">
+          <p>Favorites</p>
+          <p id="favoritesCount">0</p>
+        </div>
+        <div class="recipes-found">
+          <p>Recipes Found</p>
+          <p id="recipesFoundCount">0</p>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <!-- Enter API Key -->
+      <div class="api-key-entry" id="apiKeyEntry">
+        <h3>Enter your Spoonacular API Key</h3>
+        <p>
+          Get a free key at
+          <a
+            href="https://spoonacular.com/food-api/console/#Dashboard"
+            target="_blank"
+            >Spoonacular</a
+          >
+        </p>
+
+        <input
+          type="text"
+          id="apiKeyInput"
+          placeholder="Paste your API key here"
+          autocomplete="off"
+        />
+
+        <button id="saveApiKeyBtn">Save API Key</button>
+      </div>
+      <!-- End Enter API Key -->
+      <!-- Find Your Perfect Recipe Section -->
+      <section class="find-recipe">
+        <h2>
+          <i class="fa-solid fa-magnifying-glass"></i>Find Your Perfect Recipe
+        </h2>
+
+        <div class="search-by-type">
+          <button class="search-by-type-button" id="by-ingredients">
+            <i class="fa-solid fa-carrot"></i>By Ingredients
+          </button>
+          <button class="search-by-type-button" id="by-cuisine">
+            <i class="fa-solid fa-globe"></i>By Cuisine
+          </button>
+          <button class="search-by-type-button" id="dietary-restrictions">
+            <i class="fa-solid fa-leaf"></i>Dietary Restrictions
+          </button>
+        </div>
+
+        <!-- By Ingredient Section -->
+        <div class="find-recipes-ingredient-row">
+          <div class="find-recipes-form">
+            <form action="/complete" method="post">
+              <input type="text" name="find-recipes" id="find-recipes" />
+            </form>
+            <button id="find-recipes-button">
+              <i class="fa-solid fa-magnifying-glass"></i>Find Recipes
+            </button>
+          </div>
+
+          <div class="popular-ingredients">
+            <span>Popular Ingredients:</span>
+            <button id="ingredient-chicken">Chicken</button>
+            <button id="ingredient-pasta">Pasta</button>
+            <button id="ingredient-tomato">Tomato</button>
+            <button id="ingredient-cheese">Cheese</button>
+            <button id="ingredient-garlic">Garlic</button>
+          </div>
+        </div>
+        <!-- End By Ingredient Section -->
+
+        <!-- By Cuisine Section -->
+        <div class="find-recipes-cuisine-row">
+          <button id="cuisine-italian">
+            <i class="fa-solid fa-pizza-slice"></i>
+            <br />
+            Italian
+          </button>
+          <button id="cuisine-mexican">
+            <i class="fa-solid fa-pepper-hot"></i>
+            <br />
+            Mexican
+          </button>
+          <button id="cuisine-asian">
+            <i class="fa-solid fa-earth-asia"></i>
+            <br />
+            Asian
+          </button>
+          <button id="cuisine-american">
+            <i class="fa-solid fa-burger"></i>
+            <br />
+            American
+          </button>
+          <button id="cuisine-indian">
+            <i class="fa-solid fa-mortar-pestle"></i>
+            <br />
+            Indian
+          </button>
+          <button id="cuisine-mediterranean">
+            <i class="fa-solid fa-fish-fins"></i>
+            <br />
+            Mediterranean
+          </button>
+        </div>
+        <!-- End By Cuisine Section -->
+
+        <!-- By Dietary Section -->
+        <div class="find-recipes-dietary">
+          <button id="dietary-vegetarian">
+            <i class="fa-solid fa-fish"></i>
+            <br />
+            Vegetarian
+          </button>
+          <button id="dietary-vegan">
+            <i class="fa-solid fa-seedling"></i>
+            <br />
+            Vegan
+          </button>
+          <button id="dietary-gluten-free">
+            <i class="fa-solid fa-wheat-awn-circle-exclamation"></i>
+            <br />
+            Gluten-Free
+          </button>
+          <button id="dietary-dairy-free">
+            <i class="fa-solid fa-cow"></i>
+            <br />
+            Dairy-Free
+          </button>
+          <button id="dietary-keto">
+            <i class="fa-solid fa-dumbbell"></i>
+            <br />
+            Keto
+          </button>
+          <button id="dietary-paleo">
+            <i class="fa-solid fa-egg"></i>
+            <br />
+            Paleo
+          </button>
+        </div>
+        <!-- End By Dietary Section -->
+      </section>
+      <!-- End Find Your Perfect Recipe Section -->
+
+      <!-- Recipe Results Section -->
+      <section class="recipe-results-header">
+        <h2><i class="fa-solid fa-utensils"></i>Recipe Results</h2>
+      </section>
+
+      <section class="recipe-results">
+        
+      </section>
+      <!-- End Recipe Results Section -->
+
+      <!-- Favorites Section -->
+       <section class="favorite-recipes-header">
+        <h2><i class="fa-solid fa-heart fav-recipe-icon"></i>Your Favorite Recipes</h2>
+      </section>
+
+      <section class="favorite-recipes">
+
+      </section>
+      <!-- End Favorites Section -->
+
+      <!-- Recipe Popup Modal -->
+      <section id="recipeModal" class="modal">
+        <div class="modal-content">
+          <div id="modalBody"></div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

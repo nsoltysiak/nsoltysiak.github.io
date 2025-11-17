@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Recipe Finder</title>
+    <title>My Portfolio Site - Projects Page</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
@@ -24,10 +24,33 @@
       integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="projects_recipe_finder.css" />
+    <script src="index.js" defer></script>
     <script src="projects_recipe_finder.js" defer></script>
   </head>
   <body>
+    <nav>
+      <section class="logo-name">
+        <span class="material-symbols-outlined logo">star_shine</span>
+        <span class="name">Nick Soltysiak</span>
+      </section>
+
+      <section class="links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="work_experience.html">Work Experience</a></li>
+        <li class="dropdown">
+          <a href="#">Projects <i class="fa-solid fa-angle-down"></i></a>
+          <ul class="dropdown-content">
+            <li><a href="projects_calculator.html">Calculator Project</a></li>
+            <li><a href="projects_todolist.html">To-do List Project</a></li>
+            <li><a href="projects_recipe_finder.html">Recipe Finder Project</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact Me</a></li>
+      </section>
+    </nav>
+
     <!-- Header Section -->
     <header>
       <section class="logo-name">

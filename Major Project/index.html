@@ -30,23 +30,35 @@
   <body>
     <nav>
       <section class="logo-name">
-        <span class="material-symbols-outlined logo">star_shine</span>
-        <span class="name">Nick Soltysiak</span>
+        <img src="images/my_portfolio_logo.png" alt="My Digital Portfolio" />
       </section>
 
-      <section class="links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="work_experience.html">Work Experience</a></li>
-        <li class="dropdown">
-          <a href="#">Projects <i class="fa-solid fa-angle-down"></i></a>
-          <ul class="dropdown-content">
-            <li><a href="projects_calculator.html">Calculator Project</a></li>
-            <li><a href="projects_todolist.html">To-do List Project</a></li>
-            <li><a href="projects_recipe_finder.html">Recipe Finder Project</a></li>
-          </ul>
-        </li>
-        <li><a href="contact.html">Contact Me</a></li>
+      <!-- HAMBURGER BUTTON -->
+      <section class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
       </section>
+
+      <section class="mobile-drawer">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Education</a></li>
+          <li><a href="#">Work Experience</a></li>
+          <li class="has-submenu">
+            <a href="#" class="submenu-toggle"
+              >Projects<span class="arrow">▾</span></a
+            >
+            <ul class="submenu">
+              <li><a href="#">Calculator</a></li>
+              <li><a href="#">To-Do List</a></li>
+              <li><a href="#">Recipe Finder</a></li>
+              <li><a href="#">Counters</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Contact Me</a></li>
+        </ul>
+    </section>
     </nav>
     <header>
       <section class="banner">

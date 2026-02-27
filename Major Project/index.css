@@ -89,7 +89,7 @@ nav ul li a:hover
     {
         display: none;
         position: absolute;
-        top: 48px;
+        top: 52px;
         left: 50%;
         transform: translateX(-50%);
         background: rgb(232, 237, 240);
@@ -197,7 +197,7 @@ nav ul li a:hover
         position: fixed;
         top: 66px;
         right: 0; /* hidden off-screen */
-        width: 300px;
+        width: 250px;
         height: 500px;
         background: rgb(3, 74, 145);
         transition: transform 0.35s ease;

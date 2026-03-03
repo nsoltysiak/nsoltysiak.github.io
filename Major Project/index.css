@@ -6,6 +6,14 @@
   font-family: Archivo, sans-serif;
 }
 
+body {
+  background-image: url("images/lake-trees.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 /* HEADER */
 
 /* Nav Section */
@@ -168,7 +176,7 @@ nav ul li a:hover {
   /* Mobile right-slide drawer */
   .mobile-drawer {
     position: fixed;
-    top: 66px;
+    top: 63px;
     right: 0; /* hidden off-screen */
     width: 250px;
     height: 500px;
@@ -246,7 +254,7 @@ nav ul li a:hover {
 /* Banner Section */
 header {
   max-width: 1400px;
-  margin: 0 auto;
+  margin: 0 auto 2rem;
   padding: 10px;
 }
 
@@ -307,7 +315,10 @@ header .image img {
   display: block;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
+  body {
+    background-attachment: scroll;
+  }
   .header {
     grid-template-columns: 1fr;
     text-align: center;
@@ -324,8 +335,12 @@ header .image img {
 
 /* PROJECTS */
 .projects {
-  background-color: lightgray;
-  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto 2rem;
+  padding: 10px;
+  background-color: white;
+  opacity: 0.9;
+  border-radius: 20px;
 }
 
 .projects h1 {
@@ -335,14 +350,17 @@ header .image img {
 }
 
 .projects-container {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  justify-items: center;
+  border-radius: 20px;
+  margin-bottom: 2rem;
 }
 
 .projects-container .card {
-  flex: 0 1 23%;
+    width: 100%;
+    max-width: 400px;
 }
 
 .projects-container .card-header {
@@ -360,8 +378,9 @@ header .image img {
 
 /* Screen size between 768px and 1200px */
 @media only screen and (min-width: 768px) and (max-width: 1200px) {
-  .projects-container .card {
-    flex: 0 1 48%;
+  .projects-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
   }
 
   .projects-container .card:nth-child(3) {

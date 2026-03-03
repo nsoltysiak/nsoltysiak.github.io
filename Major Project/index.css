@@ -278,7 +278,7 @@ header {
 }
 
 header .description h1 {
-  font-size: clamp(2.5rem, 4vw, 5rem);
+  font-size: clamp(3rem, 5vw, 5rem);
   line-height: 1.1;
   margin: 0 auto 2.5rem;
 }

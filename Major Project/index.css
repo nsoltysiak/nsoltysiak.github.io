@@ -251,23 +251,40 @@ nav ul li a:hover {
 }
 /* End Nav Section */
 
-/* Banner Section */
-header {
-  max-width: 1400px;
-  margin: 0 auto 2rem;
-  padding: 10px;
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(1rem, 2vw, 2rem);
+  justify-content: center;
+  padding: clamp(1rem, 2vw, 2rem);
 }
 
-.header {
+header,
+.projects {
+  width: clamp(500px, 45vw, 1200px);
+}
+
+@media (max-width: 1600px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  header,
+  .projects {
+    width: 100%;
+  }
+}
+
+/* Banner Section */
+header {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  min-height: 500px;
   background: white;
-  border-radius: 20px;
+  border-radius: 15px;
   overflow: hidden;
 }
 
-.header .description {
+header .description {
   background-color: rgb(3, 74, 145);
   color: white;
   padding: clamp(2rem, 4vw, 4rem);
@@ -278,30 +295,30 @@ header {
 }
 
 header .description h1 {
-  font-size: clamp(3rem, 5vw, 5rem);
+  font-size: clamp(2rem, 4vw, 4rem);
   line-height: 1.1;
   margin: 0 auto 2.5rem;
 }
 
 header .description h2 {
-  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
   font-weight: 500;
   margin: 0 auto 1.25rem;
 }
 
 header .description button {
   margin: 1.25rem auto 0;
-  padding: 0.6rem 1rem;
+  padding: 0.6rem 1.2rem;
   font-size: clamp(1rem, 1.5vw, 1.3rem);
-  border-radius: 8px;
+  border-radius: 10px;
   border: 1px solid black;
   background: white;
   max-width: 300px;
-  transition: 0.2s ease;
+  transition: 0.3s ease;
 }
 
 header .description button:hover {
-  background-color: rgb(227, 231, 245);
+  background-color: rgb(172, 186, 240);
 }
 
 header .image {
@@ -319,7 +336,7 @@ header .image img {
   body {
     background-attachment: scroll;
   }
-  .header {
+  header {
     grid-template-columns: 1fr;
     text-align: center;
   }
@@ -329,46 +346,77 @@ header .image img {
   }
 }
 
+@media (min-width: 1600px) {
+  header {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  header .image {
+    height: clamp(409px, 25vw, 430px)
+  }
+
+  header .description {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    padding: 1rem;
+  }
+
+  header .description h1 {
+    font-size: clamp(1.75rem, 3vw, 3.5rem);
+    grid-column: 1 / -1;
+  }
+
+  header .description h2 {
+    font-size: clamp(1rem, 2vw, 2.5rem);
+    font-weight: 500;
+    margin: 0 auto 1.25rem;
+  }
+
+  header .description button {
+    font-size: clamp(1rem, 1.5vw, 1.3rem);
+    grid-column: 1 / -1;
+  }
+}
 /* End Banner Section */
 
 /* END HEADER */
 
 /* PROJECTS */
 .projects {
-  max-width: 1400px;
-  margin: 0 auto 2rem;
-  padding: 10px;
   background-color: white;
-  opacity: 0.9;
-  border-radius: 20px;
+  opacity: 0.95;
+  border-radius: 15px;
+  padding: 2rem;
 }
 
 .projects h1 {
   text-align: center;
   font-size: 3rem;
-  margin-bottom: 2rem;
+  margin: 0 auto 0.5rem;
 }
 
 .projects-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-  justify-items: center;
+  gap: clamp(1rem, 2vw, 2rem);
   border-radius: 20px;
-  margin-bottom: 2rem;
+  justify-items: center;
 }
 
 .projects-container .card {
-    width: 100%;
-    max-width: 400px;
+  width: 100%;
+  max-width: 400px;
 }
 
 .projects-container .card-header {
   text-align: center;
 }
 
-.projects-container .card-logos {
-  font-size: 4rem;
+.projects-container .card-header i {
+  font-size: 2rem;
+  margin: 10px auto;
 }
 
 .projects-container h5 {
@@ -376,224 +424,60 @@ header .image img {
   margin-bottom: 1.5rem;
 }
 
-/* Screen size between 768px and 1200px */
-@media only screen and (min-width: 768px) and (max-width: 1200px) {
+.projects-container .card-body li
+{
+    font-size: 18px;
+}
+
+@media (max-width: 1300px), (min-width: 1600px) {
   .projects-container {
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-  }
-
-  .projects-container .card:nth-child(3) {
-    margin-top: 2rem;
-  }
-
-  .projects-container .card:nth-child(4) {
-    margin-top: 2rem;
   }
 }
 
-/* Screen size between 500px and 768px */
-@media only screen and (min-width: 500px) and (max-width: 767.8px) {
-  .projects h1 {
-    font-size: 2.5rem;
-  }
-
-  .projects-container .card {
-    flex: 0 1 80%;
-  }
-
-  .projects-container .card:nth-child(2) {
-    margin-top: 2rem;
-  }
-
-  .projects-container .card:nth-child(3) {
-    margin-top: 2rem;
-  }
-
-  .projects-container .card:nth-child(4) {
-    margin-top: 2rem;
-  }
-}
-
-/* Screen size less than 500px */
-@media only screen and (max-width: 499.8px) {
-  .projects h1 {
-    font-size: 2rem;
-  }
-  .projects-container .card {
-    flex: 0 1 90%;
-  }
-
-  .projects-container .card:nth-child(2) {
-    margin-top: 2rem;
-  }
-
-  .projects-container .card:nth-child(3) {
-    margin-top: 2rem;
-  }
-
-  .projects-container .card:nth-child(4) {
-    margin-top: 2rem;
+@media (max-width: 750px) {
+  .projects-container {
+    grid-template-columns: 1fr;
   }
 }
 /* END PROJECTS */
 
-/* SKILLS */
-.skills {
-  background: rgb(163, 196, 214);
-  padding: 2rem;
-}
-
-.skills h1 {
-  text-align: center;
-  font-size: 3rem;
-  margin-bottom: 2rem;
-}
-
-.skills-container {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-.skills-container .card {
-  flex: 0 1 23%;
-}
-
-.skills-container .card-header {
-  text-align: center;
-}
-
-.skills-container .card-logos {
-  font-size: 4rem;
-}
-
-.skills-container h5 {
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
-/* Screen size between 768px and 1200px */
-@media only screen and (min-width: 768px) and (max-width: 1200px) {
-  .skills-container .card {
-    flex: 0 1 48%;
-  }
-
-  .skills-container .card:nth-child(3) {
-    margin-top: 2rem;
-  }
-
-  .skills-container .card:nth-child(4) {
-    margin-top: 2rem;
-  }
-}
-
-/* Screen size between 500px and 768px */
-@media only screen and (min-width: 500px) and (max-width: 767.8px) {
-  .skills h1 {
-    font-size: 2.5rem;
-  }
-
-  .skills-container .card {
-    flex: 0 1 80%;
-  }
-
-  .skills-container .card:nth-child(2) {
-    margin-top: 2rem;
-  }
-
-  .skills-container .card:nth-child(3) {
-    margin-top: 2rem;
-  }
-
-  .skills-container .card:nth-child(4) {
-    margin-top: 2rem;
-  }
-}
-
-/* Screen size less than 500px */
-@media only screen and (max-width: 499.8px) {
-  .skills h1 {
-    font-size: 2rem;
-  }
-  .skills-container .card {
-    flex: 0 1 90%;
-  }
-
-  .skills-container .card:nth-child(2) {
-    margin-top: 2rem;
-  }
-
-  .skills-container .card:nth-child(3) {
-    margin-top: 2rem;
-  }
-
-  .skills-container .card:nth-child(4) {
-    margin-top: 2rem;
-  }
-}
-
-/* END SKILLS */
-
 /* FOOTER */
 footer {
-  background-color: rgb(6, 6, 60);
-  color: white;
-  padding: 2rem;
-}
-
-footer h1 {
-  text-align: center;
-}
-footer .col-12 {
-  font-size: 1.5rem;
-  margin-top: 2rem;
-}
-
-footer .fa-solid {
-  --fa-animation-duration: 3s;
-}
-
-footer .footer-sub-text {
-  font-size: 0.9rem;
-}
-
-.footer-copyright {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
   align-items: center;
-  justify-content: space-evenly;
+  background-color: rgb(3, 74, 145);
+  color: white;
+  padding: 1rem;
+  font-size: 20px;
 }
 
 footer p {
   margin: 0;
-  font-size: 1.2rem;
+  padding: 0;
+  font-size: 24px;
 }
 
-.footer-button {
-  padding: 1rem;
-  border-radius: 0.75rem;
-  border: 2px solid black;
-  cursor: pointer;
-  width: 10rem;
-  transition-property: background-color, border;
-  transition-duration: 0.3s;
+footer .footer-button {
+  margin: 0;
+  padding: 5px 10px;
+  border-radius: 10px;
+  transition: 0.3s ease;
 }
 
-.footer-button:hover {
-  background-color: aquamarine;
+footer .footer-button:hover {
+  background-color: #a6dbee;
 }
 
-@media only screen and (max-width: 500px) {
-  .footer-copyright {
-    display: flex;
+@media (max-width: 800px) {
+  footer {
     flex-direction: column;
-    align-items: center;
   }
 
-  .footer-copyright .footer-button {
-    margin-top: 2rem;
+  footer .footer-button {
+    margin-top: 20px;
   }
 }
 /* END FOOTER */

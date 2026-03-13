@@ -3,22 +3,26 @@ body
     background-color: #a9e4e7;
 }
 /* Header */
-header {
+.to-do-list-header {
     text-align: center;
-    margin-bottom: 40px;
+    margin: 1rem auto 0;
+    padding: 1rem;
+    max-width: 900px;
+    border-radius: 20px;
+    background: #fffffff2;
 }
 
-header > h1 {
-    color: blue;
+.to-do-list-header > h1 {
+    color: rgb(5, 65, 162);
     font-size: 3rem;
     font-weight: 700;
     letter-spacing: -0.02em;
     text-shadow: 0 4px 12px #00000026;
-    margin-bottom: 8px;
-    margin-top: 1rem;
+    margin: 0;
+    padding: 0;
 }
 
-header > h1::after {
+/* .to-do-list-header > h1::after {
     content: '';
     display: block;
     width: 60px;
@@ -26,15 +30,15 @@ header > h1::after {
     background: #ffffff4d;
     margin: 16px auto;
     border-radius: 2px;
-}
+} */
 
 /* Main Container */
-main {
-    max-width: 680px;
+.to-do-list-main {
+    max-width: 900px;
     margin: 1rem auto;
     background: #fffffff2;
     backdrop-filter: blur(10px);
-    border-radius: 24px;
+    border-radius: 20px;
     box-shadow: 0 25px 50px #00000026;
     border: 1px solid #ffffff33;
     overflow: hidden;
@@ -80,7 +84,7 @@ main {
 
 .add-btn {
     padding: 16px 32px;
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    background: linear-gradient(135deg, #1c8ff5 0%, #0e9ca4 100%);
     color: #ffffff;
     border: none;
     border-radius: 16px;
@@ -313,7 +317,7 @@ main {
 /* Responsive Design */
 @media (max-width: 768px) {
     
-    header > h1 {
+    .to-do-list-header > h1 {
         font-size: 2rem;
     }
     

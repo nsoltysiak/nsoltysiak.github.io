@@ -251,7 +251,7 @@ nav ul li a:hover {
 }
 /* End Nav Section */
 
-main {
+.home-page-main {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: clamp(1rem, 2vw, 2rem);
@@ -259,24 +259,24 @@ main {
   padding: clamp(1rem, 2vw, 2rem);
 }
 
-header,
+.home-page-header,
 .projects {
   width: clamp(500px, 45vw, 1200px);
 }
 
 @media (max-width: 1600px) {
-  main {
+  .home-page-main {
     grid-template-columns: 1fr;
   }
 
-  header,
+  .home-page-header,
   .projects {
     width: 100%;
   }
 }
 
 /* Banner Section */
-header {
+.home-page-header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   background: white;
@@ -284,7 +284,7 @@ header {
   overflow: hidden;
 }
 
-header .description {
+.home-page-header .description {
   background-color: rgb(3, 74, 145);
   color: white;
   padding: clamp(2rem, 4vw, 4rem);
@@ -294,19 +294,19 @@ header .description {
   text-align: center;
 }
 
-header .description h1 {
+.home-page-header .description h1 {
   font-size: clamp(2rem, 4vw, 4rem);
   line-height: 1.1;
   margin: 0 auto 2.5rem;
 }
 
-header .description h2 {
+.home-page-header .description h2 {
   font-size: clamp(1.5rem, 3vw, 2.5rem);
   font-weight: 500;
   margin: 0 auto 1.25rem;
 }
 
-header .description button {
+.home-page-header .description button {
   margin: 1.25rem auto 0;
   padding: 0.6rem 1.2rem;
   font-size: clamp(1rem, 1.5vw, 1.3rem);
@@ -317,15 +317,15 @@ header .description button {
   transition: 0.3s ease;
 }
 
-header .description button:hover {
+.home-page-header .description button:hover {
   background-color: rgb(172, 186, 240);
 }
 
-header .image {
+.home-page-header .image {
   position: relative;
 }
 
-header .image img {
+.home-page-header .image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -336,45 +336,45 @@ header .image img {
   body {
     background-attachment: scroll;
   }
-  header {
+  .home-page-header {
     grid-template-columns: 1fr;
     text-align: center;
   }
 
-  header .image {
+  .home-page-header .image {
     height: 300px;
   }
 }
 
 @media (min-width: 1600px) {
-  header {
+  .home-page-header {
     grid-template-columns: 1fr;
     text-align: center;
   }
 
-  header .image {
+  .home-page-header .image {
     height: clamp(409px, 25vw, 430px)
   }
 
-  header .description {
+  .home-page-header .description {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0;
     padding: 1rem;
   }
 
-  header .description h1 {
+  .home-page-header .description h1 {
     font-size: clamp(1.75rem, 3vw, 3.5rem);
     grid-column: 1 / -1;
   }
 
-  header .description h2 {
+  .home-page-header .description h2 {
     font-size: clamp(1rem, 2vw, 2.5rem);
     font-weight: 500;
     margin: 0 auto 1.25rem;
   }
 
-  header .description button {
+  .home-page-header .description button {
     font-size: clamp(1rem, 1.5vw, 1.3rem);
     grid-column: 1 / -1;
   }

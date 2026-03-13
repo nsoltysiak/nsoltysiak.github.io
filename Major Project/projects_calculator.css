@@ -1,8 +1,15 @@
 /* Calculator Project */
+main
+{
+    display: block;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 .calculator-project
 {
   background-color: lightgray;
   padding: 2rem;
+  border-radius: 10px;
 }
 
 .calculator-project h1 
